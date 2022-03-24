@@ -82,15 +82,22 @@
           >awesome-vue</a
         >
       </li>
+      <div>{{ threads }}</div>
     </ul>
   </div>
 </template>
 
 <script>
+import sourceData from '@/data.json';
 export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      threads: sourceData.threads,
+    };
   },
 };
 </script>
