@@ -42,3 +42,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <li v-for="item in items">{{ item.name }}</li>
 )
 ```
+
+### install and use vue-router
+
+- router-view : is used to render the component in the router
+- route-link : is used to link to the component

@@ -3,17 +3,13 @@
 
   <div class="container">
     <page-home-vue />
+    <router-view />
   </div>
 </template>
 
 <script>
-import PageHomeVue from './components/PageHome.vue';
-
 export default {
   name: 'App',
-  components: {
-    PageHomeVue,
-  },
 };
 </script>
 
