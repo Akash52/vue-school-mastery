@@ -1,7 +1,9 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
 
-  <page-home-vue />
+  <div class="container">
+    <page-home-vue />
+  </div>
 </template>
 
 <script>
