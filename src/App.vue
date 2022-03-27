@@ -3,8 +3,8 @@
 
   <div class="container">
     <page-home-vue />
-    <router-view />
   </div>
+  <router-view />
 </template>
 
 <script>

@@ -30,7 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Roadmap
 
-### Diplaing a list of elements in Vue 3
+### Displaying a list of elements in Vue 3
 
 - SFC (Single File Components)
 - Give your components a good description
@@ -38,9 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - v-for directive is used to iterate over an array of data
 
 ```vue
-(e.g.
 <li v-for="item in items">{{ item.name }}</li>
-)
 ```
 
 ### install and use vue-router
