@@ -57,6 +57,7 @@ export default {
   computed: {
     thread() {
       return this.threads.find((thread) => thread.id === this.id);
+      // also available under this.$route.params.id
     },
   },
 
