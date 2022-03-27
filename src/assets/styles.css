@@ -904,6 +904,25 @@ ul.breadcrumbs li,
   line-height: 1.5;
 }
 
+.btn-home {
+  background-color: #eee;
+  padding: 2px 4px;
+  font-weight: 800;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+}
+.btn-home:hover {
+  opacity: 0.8;
+}
+a {
+  text-decoration: none;
+}
+router-link {
+  text-decoration: none;
+}
+
 @media (min-width: 240px) and (max-width: 720px) {
   .text,
   p,

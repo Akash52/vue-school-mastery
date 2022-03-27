@@ -1,7 +1,9 @@
 <template>
   <div class="col-large push-top">
+    <button class="btn-home">
+      <router-link to="/"> Home </router-link>
+    </button>
     <h1>{{ thread.title }}</h1>
-
     <div class="post-list">
       <div class="post" v-for="postId in thread.posts" :key="postId">
         <div class="user-info">
