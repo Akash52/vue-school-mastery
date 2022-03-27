@@ -1,5 +1,5 @@
 <template>
-  <h1>Welcome to the Vue 3 Forum</h1>
+  <h1 class="text-center">Welcome to the Vue 3 Forum</h1>
   <thread-list :threads="threads" />
 </template>
 

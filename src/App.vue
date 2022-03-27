@@ -1,10 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-
   <div class="container">
     <page-home-vue />
+
+    <router-view />
   </div>
-  <router-view />
 </template>
 
 <script>
