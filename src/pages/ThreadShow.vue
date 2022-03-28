@@ -6,6 +6,23 @@
     <h1>{{ thread.title }}</h1>
 
     <post-list :posts="threadPosts" />
+
+    <div class="col-full">
+      <form @submit.prevent="addPost">
+        <textarea
+          v-model="newPostText"
+          placeholder="What's on your mind?"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="form-input"
+        ></textarea>
+        <div class="form-actions">
+          <button class="btn-blue">Submit Post</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -29,6 +46,7 @@ export default {
     return {
       threads: sourceData.threads,
       posts: sourceData.posts,
+      newPostText: '',
     };
   },
 
@@ -39,6 +57,19 @@ export default {
     },
     threadPosts() {
       return this.posts.filter((post) => post.threadId === this.id);
+    },
+  },
+  methods: {
+    addPost() {
+      const newPost = {
+        id: this.posts.length + 1,
+        threadId: this.id,
+        userId: 'rpbB8C6ifrYmNDufMERWfQUoa202',
+        text: this.newPostText,
+        publishedAt: new Date().toLocaleString(),
+      };
+      this.posts.push(newPost);
+      this.newPostText = '';
     },
   },
 };
