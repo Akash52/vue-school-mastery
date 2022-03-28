@@ -32,17 +32,13 @@
 
 <script>
 import sourceData from '@/data.json';
-import AppDate from '@/components/AppDate';
+
 export default {
   props: {
     posts: {
       type: Array,
       required: true,
     },
-  },
-
-  components: {
-    AppDate,
   },
 
   data() {
