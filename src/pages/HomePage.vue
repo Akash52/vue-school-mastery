@@ -1,17 +1,19 @@
 <template>
-  <h1 class="text-center">Welcome to the Vue 3 Forum</h1>
-  <thread-list :threads="threads" />
-</template>
+  <h1>Welcome to the Forum</h1>
 
+  <ForumList :forums="forums" />
+</template>
 <script>
+import ForumList from '@/components/ForumList';
 import sourceData from '@/data.json';
-import ThreadList from '@/components/ThreadList';
 
 export default {
-  components: { ThreadList },
+  components: {
+    ForumList,
+  },
   data() {
     return {
-      threads: sourceData.threads,
+      forums: sourceData.forums,
     };
   },
 };

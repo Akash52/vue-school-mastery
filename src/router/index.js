@@ -1,9 +1,9 @@
 import HomePage from '@/pages/HomePage';
 import NotFound from '@/pages/NotFound';
 import ThreadShow from '@/pages/ThreadShow.vue';
+import FroumPageVue from '@/pages/FroumPage';
 import { createRouter, createWebHistory } from 'vue-router';
 import sourceData from '@/data.json';
-import FroumPageVue from '@/pages/FroumPage.vue';
 
 const routes = [
   {
