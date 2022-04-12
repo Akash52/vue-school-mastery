@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <page-home-vue />
-
     <router-view />
   </div>
 </template>
