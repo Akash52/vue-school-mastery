@@ -4,12 +4,19 @@ import ThreadShow from '@/pages/ThreadShow.vue';
 import FroumPageVue from '@/pages/FroumPage';
 import { createRouter, createWebHistory } from 'vue-router';
 import sourceData from '@/data.json';
+import CategoryVue from '@/pages/CategoryPage.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: HomePage,
+  },
+  {
+    path: '/category/:id',
+    name: 'Category',
+    component: CategoryVue,
+    props: true,
   },
   {
     path: '/forum/:id',
