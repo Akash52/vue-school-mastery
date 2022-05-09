@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import PostList from '@/components/PostList.vue'
-import PostEditor from '@/components/PostEditor.vue'
+import PostList from "@/components/PostList.vue";
+import PostEditor from "@/components/PostEditor.vue";
 
 export default {
-  name: 'ThreadShow',
+  name: "ThreadShow",
   components: {
     PostList,
     PostEditor,
@@ -28,17 +28,17 @@ export default {
   },
   computed: {
     threads() {
-      return this.$store.state.threads
+      return this.$store.state.threads;
     },
     posts() {
-      return this.$store.state.posts
+      return this.$store.state.posts;
     },
     thread() {
-      return this.threads.find((thread) => thread.id === this.id)
+      return this.threads.find((thread) => thread.id === this.id);
       // also available under this.$route.params.id
     },
     threadPosts() {
-      return this.posts.filter((post) => post.threadId === this.id)
+      return this.posts.filter((post) => post.threadId === this.id);
     },
   },
   methods: {
@@ -46,10 +46,9 @@ export default {
       const post = {
         ...eventData.post,
         threadId: this.id,
-      }
-      this.posts.push(post)
-      this.thread.posts.push(post.id)
+      };
+      this.$store.dispatch("createPost", post);
     },
   },
-}
+};
 </script>
