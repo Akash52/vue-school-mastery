@@ -40,10 +40,17 @@ export default createStore({
         threadId: post.threadId,
       }); //append post to thread
     },
+    updateUser(context, user) {
+      context.commit('setUser', { user, userId: user.id });
+    },
   },
   mutations: {
     setPost(state, { post }) {
       state.posts.push(post);
+    },
+    setUser(state, { user, userId }) {
+      const index = state.users.findIndex((user) => user.id === userId);
+      state.users[index] = user;
     },
     appendPostThread(state, { postId, threadId }) {
       const thread = state.threads.find((thread) => thread.id === threadId);
